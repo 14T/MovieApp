@@ -17,16 +17,16 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-//    var data: MovieViewModel? {
-//        didSet {
-//            nameLabel.text = data?.nameString
+    var data: MovieViewModel? {
+        didSet {
+            nameLabel.text = data?.name
 //            descriptionLabel.text = data?.descriptionString
 //            initialsLabel.text = data?.initialsString
 //            coverView.backgroundColor = data?.color
 //            coverImageView.image = UIImage(named: data?.avatarString ?? "")
-//        }
-//    }
-    
+        }
+    }
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         coverView.clipToRoundedCorner()

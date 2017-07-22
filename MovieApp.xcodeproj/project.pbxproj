@@ -23,6 +23,9 @@
 		173F9B9F1F235182005C309C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F9B9D1F235182005C309C /* MovieCell.swift */; };
 		173F9BA01F235182005C309C /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 173F9B9E1F235182005C309C /* MovieCell.xib */; };
 		173F9BA21F23522D005C309C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F9BA11F23522D005C309C /* UIViewExtension.swift */; };
+		173F9BA41F239A50005C309C /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F9BA31F239A50005C309C /* UITableViewExtension.swift */; };
+		173F9BA71F23A433005C309C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F9BA61F23A433005C309C /* Movie.swift */; };
+		173F9BA91F23A4C3005C309C /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F9BA81F23A4C3005C309C /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		173F9B9D1F235182005C309C /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		173F9B9E1F235182005C309C /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		173F9BA11F23522D005C309C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		173F9BA31F239A50005C309C /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		173F9BA61F23A433005C309C /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Model/Movie.swift; sourceTree = "<group>"; };
+		173F9BA81F23A4C3005C309C /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieViewModel.swift; path = ViewModel/MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 				173F9B741F233A5F005C309C /* Storyboards */,
 				173F9B731F233A54005C309C /* Others */,
 				173F9B721F233A4B005C309C /* ViewModels */,
+				173F9BA51F23A3EE005C309C /* Model */,
 				173F9B711F233A43005C309C /* Views */,
 			);
 			path = MovieApp;
@@ -128,6 +135,7 @@
 		173F9B721F233A4B005C309C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				173F9BA81F23A4C3005C309C /* MovieViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				173F9BA11F23522D005C309C /* UIViewExtension.swift */,
+				173F9BA31F239A50005C309C /* UITableViewExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -180,6 +189,14 @@
 				173F9B911F233E58005C309C /* HomeViewControllerTests.swift */,
 			);
 			path = MovieAppTDD;
+			sourceTree = "<group>";
+		};
+		173F9BA51F23A3EE005C309C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				173F9BA61F23A433005C309C /* Movie.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,12 +308,15 @@
 			files = (
 				173F9BA21F23522D005C309C /* UIViewExtension.swift in Sources */,
 				173F9B781F233ADA005C309C /* Refreshable.swift in Sources */,
+				173F9BA71F23A433005C309C /* Movie.swift in Sources */,
 				173F9B7C1F233AF1005C309C /* StoryboardInitable.swift in Sources */,
 				173F9B5E1F233A1D005C309C /* AppDelegate.swift in Sources */,
 				173F9B9F1F235182005C309C /* MovieCell.swift in Sources */,
+				173F9BA41F239A50005C309C /* UITableViewExtension.swift in Sources */,
 				173F9B811F233B09005C309C /* LoadingCell.swift in Sources */,
 				173F9B7E1F233AF7005C309C /* CellRepresentable.swift in Sources */,
 				173F9B941F2340FB005C309C /* HomeViewController.swift in Sources */,
+				173F9BA91F23A4C3005C309C /* MovieViewModel.swift in Sources */,
 				173F9B7A1F233AE8005C309C /* ActionProtocols.swift in Sources */,
 				173F9B961F2342FF005C309C /* Constants.swift in Sources */,
 			);
