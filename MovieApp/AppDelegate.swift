@@ -3,7 +3,7 @@
 //  MovieApp
 //
 //  Created by Chetan Anand on 22/7/17.
-//  Copyright © 2017 JumpingPixel. All rights reserved.
+//  Copyright © 2017 ChetanAnand. All rights reserved.
 //
 
 import UIKit

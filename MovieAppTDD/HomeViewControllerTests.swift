@@ -3,7 +3,7 @@
 //  MovieApp
 //
 //  Created by Chetan Anand on 22/7/17.
-//  Copyright © 2017 JumpingPixel. All rights reserved.
+//  Copyright © 2017 ChetanAnand. All rights reserved.
 //
 
 import XCTest
@@ -12,11 +12,12 @@ import XCTest
 
 class HomeViewControllerTests: XCTestCase {
     
-    var homeViewColtroller : HomeViewController!
+    var sut : HomeViewController!
     
     override func setUp() {
         super.setUp()
-        homeViewColtroller = HomeViewController.instanceFromStoryboard()
+        sut = HomeViewController.instanceFromStoryboard()
+        _ = sut.view
     }
     
     override func tearDown() {
@@ -24,12 +25,12 @@ class HomeViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func homeViewControllerExixts_shouldBeNotNill(){
-        XCTAssertNotNil(homeViewColtroller)
+    func test_HomeViewController_IsNotNill(){
+        XCTAssertNotNil(sut)
     }
  
-    func tableViewExists_shouldBeNotNill(){
-        XCTAssertNotNil(homeViewColtroller.tableView)
+    func test_TableView_AfterViewDidLoad_IsNotNill(){
+        XCTAssertNotNil(sut.tableView)
     }
     
 }
