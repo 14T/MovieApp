@@ -9,16 +9,21 @@
 import Foundation
 
 struct Movie {
-  var id : String?
-  var name : String?
+  var id : Int?
+  var title : String?
+  var popularity : Double?
+  var posterPathId : String?
   
   //Map object from JSON data
   init(JSON: AnyObject) {
-    id = JSON.value(forKey:"topic_id") as? String
-    
+    id = JSON.value(forKey:"id") as? Int
+    title = JSON.value(forKey:"title") as? String
+    popularity = JSON.value(forKey:"popularity") as? Double
+    posterPathId = JSON.value(forKey:"poster_path") as? String
   }
   
+  //For Unit Testing
   init(name : String){
-    self.name = name
+    self.title = name
   }
 }

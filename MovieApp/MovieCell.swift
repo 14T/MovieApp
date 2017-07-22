@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCell: UITableViewCell {
 
@@ -19,11 +20,13 @@ class MovieCell: UITableViewCell {
     
     var data: MovieViewModel? {
         didSet {
-            nameLabel.text = data?.name
-//            descriptionLabel.text = data?.descriptionString
-//            initialsLabel.text = data?.initialsString
-//            coverView.backgroundColor = data?.color
-//            coverImageView.image = UIImage(named: data?.avatarString ?? "")
+            nameLabel.text = data?.title
+            descriptionLabel.text = data?.popularity
+          coverImageView.image = #imageLiteral(resourceName: "moviePlaceholder")
+          if let url = data?.posterPathId{
+          coverImageView.kf.setImage(with: url )
+          }
+          
         }
     }
   

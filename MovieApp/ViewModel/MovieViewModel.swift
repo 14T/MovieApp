@@ -17,9 +17,17 @@ struct MovieViewModel : CellRepresentable {
     self.movie = value
   }
   
-  var name : String? {
-    return movie.name
+  var title : String? {
+    return movie.title
   }
+  var popularity : String? {
+    return "Popularity: \(movie.popularity?.roundTo(places: 2) ?? 0)"
+  }
+  
+  var posterPathId : URL? {
+    return URL(string: APIUtils.getImageUrl(imageId: movie.posterPathId))
+  }
+ 
   
   
 }

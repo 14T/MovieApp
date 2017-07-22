@@ -24,18 +24,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0e-y5-0ki">
                         <rect key="frame" x="8" y="4" width="70" height="70"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="XLZ-QO-Vnm">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="ANL-O2-ltU">
-                                <rect key="frame" x="17.5" y="17" width="35" height="35.5"/>
+                                <rect key="frame" x="17" y="17" width="35" height="35.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ANL-O2-ltU" secondAttribute="height" multiplier="1:1" id="Fcz-CP-Zzp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLZ-QO-Vnm">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ANL-O2-ltU" firstAttribute="centerY" secondItem="o0e-y5-0ki" secondAttribute="centerY" id="OxO-Ss-isH"/>
@@ -55,7 +55,7 @@
                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNe-H8-jh9">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNe-H8-jh9" userLabel="Popularity">
                         <rect key="frame" x="86" y="33.5" width="265" height="212"/>
                         <string key="text">Each onboarding experience is comprised of two primary components - the background and the content pages. The background includes the static background image/video, the page control, and the skip button. The content pages are made up of four pieces, an image/icon, title, body, and action button.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,4 +86,7 @@
             <point key="canvasLocation" x="71.5" y="159"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="moviePlaceholder" width="1024" height="1024"/>
+    </resources>
 </document>

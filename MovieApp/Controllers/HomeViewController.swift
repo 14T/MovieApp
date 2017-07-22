@@ -22,6 +22,19 @@ class HomeViewController: UIViewController, StoryboardInitable   {
     super.viewDidLoad()
     
     tableView.setup(self, dataSource: self, cellClass: MovieCell.self)
+    fetchData()
+  }
+  
+  func fetchData() {
+    
+    APIClient.instance.getMovies(releaseDateLessThan: Constants.Config.startDate, sortBy: Popularity.release_dateDOTdesc, page: 1) { (movies) in
+      guard let movies = movies else {return}
+      for item in movies{
+      let movieViewModel = MovieViewModel(value: item)
+      self.data.append(movieViewModel)
+      }
+      self.tableView.reloadData()
+    }
   }
 }
 
