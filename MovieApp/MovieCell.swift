@@ -24,7 +24,7 @@ class MovieCell: UITableViewCell {
       nameLabel.text = data?.title
       descriptionLabel.text = data?.popularity
       coverImageView.image = #imageLiteral(resourceName: "moviePlaceholder")
-//      backdropImageView.alpha = 0.8
+//      backdropImageView.image = #imageLiteral(resourceName: "moviePlaceholder")
       
       if let url = data?.posterPathId{
         coverImageView.kf.setImage(with: url )

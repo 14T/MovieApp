@@ -20,7 +20,7 @@ class APIClient  {
   
   
   func getMovies(releaseDateLessThan: String, sortBy: Popularity, page : Int , completionHandler : @escaping (([Movie]?) -> ())){
-    
+    getMoviesRequest?.cancel()
     getMoviesRequest =   Alamofire.request(APIRouter.getMovies(releaseDateLessThan: releaseDateLessThan, sort_by: sortBy.dotNotation(), page: page)).responseJSON { (response) in
       
       switch response.result {

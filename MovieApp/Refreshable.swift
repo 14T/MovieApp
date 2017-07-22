@@ -19,6 +19,7 @@ protocol Refreshable {
 
 extension Refreshable where Self: UIViewController {
 
+  
    func setupRefreshControl(selector: Selector){
 
     refreshControl.backgroundColor = UIColor.clear
