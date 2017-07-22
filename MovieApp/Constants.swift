@@ -8,6 +8,7 @@
 
 
 import Foundation
+import UIKit
 
 /// All Constants used in the App
 /// Note :  Using case-less ENUM as Constatnts because of its non-initializable property
@@ -34,6 +35,11 @@ enum Constants{
       return Config.isDevelopment ? devUrl : prodUrl
     }
     
+  }
+  
+  enum AppColor {
+    static let darkGray = UIColor(red:0.15,green:0.15,blue:0.15,alpha:1.00)
+    static let navBar = UIColor(red:0.09,green:0.09,blue:0.09,alpha:1.00)
   }
   
 

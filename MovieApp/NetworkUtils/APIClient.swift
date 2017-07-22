@@ -25,7 +25,6 @@ class APIClient  {
       
       switch response.result {
       case .success:
-        print("Validation Successful")
         guard let responseJSON = response.result.value as? [String: Any],
           let details = responseJSON["results"] as? [AnyObject] else {
             return

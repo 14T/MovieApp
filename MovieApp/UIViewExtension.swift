@@ -11,10 +11,12 @@ import UIKit
 
 extension UIView {
   
-  func clipToRoundedCorner() {
+  func clipToRoundedCorner(withBorderWidth : CGFloat, borderColor : UIColor) {
     self.layoutIfNeeded()
     self.layer.cornerRadius = self.bounds.height/2
     self.clipsToBounds = true
+    self.layer.borderWidth = withBorderWidth
+    self.layer.borderColor = borderColor.cgColor
   }
   
 }

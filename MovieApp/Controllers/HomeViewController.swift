@@ -21,7 +21,9 @@ class HomeViewController: UIViewController, StoryboardInitable   {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    title = "ShopBack Movies"
     tableView.setup(self, dataSource: self, cellClass: MovieCell.self)
+    tableView.backgroundColor = Constants.AppColor.darkGray
     fetchData()
   }
   
