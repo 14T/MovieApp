@@ -11,18 +11,4 @@ import UIKit
 
 protocol CellRepresentable {
     func cellInstance(tableView : UITableView, indexPath : IndexPath) -> UITableViewCell
-    
-    
-    //Optional
-    func cellInstance(_ collectionView : UICollectionView, indexPath : IndexPath, isSelected : Bool) -> UICollectionViewCell
-    
 }
-
-extension CellRepresentable{
-    
-    
-    func cellInstance(_ collectionView : UICollectionView, indexPath : IndexPath, isSelected : Bool) -> UICollectionViewCell{
-        return UICollectionViewCell()
-    }
-}
-
