@@ -28,6 +28,8 @@ class BookingViewController: UIViewController, StoryboardInitable {
 }
 
 extension BookingViewController : UIWebViewDelegate{
+  
+  
   func webViewDidStartLoad(_ webView: UIWebView) {
     SVProgressHUD.show()
   }
