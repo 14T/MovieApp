@@ -42,6 +42,7 @@ class MovieDetailViewController: UIViewController,StoryboardInitable, Refreshabl
         self.refreshControl.endRefreshing()
       }
       guard let movie = movie else{
+        // Fallback to already available data because of API issues
         if let movieObject = self.movieViewModel?.movieObject {
           self.data.append(MovieDetailViewModel(value: movieObject))
           self.tableView.reloadData()
