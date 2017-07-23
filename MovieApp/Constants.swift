@@ -19,6 +19,7 @@ enum Constants{
     static let isDevelopment  = true
     static let apiKey = "6c29f59fe30eb048559ee929fb949c15"  // Got it after registering at IMDB Developer portal
     static let startDate = "2016-12-31"
+    static let bookingUrl = "http://www.cathaycineplexes.com.sg/"
   }
   
   /// Network Constatnts

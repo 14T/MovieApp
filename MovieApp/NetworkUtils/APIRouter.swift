@@ -13,12 +13,15 @@ enum APIRouter: URLRequestConvertible {
   static var baseURL = Constants.Network.baseUrl
   
   case getMovies(releaseDateLessThan: String, sort_by: String, page : Int )
+  case getMovieDetail(id: String)
   
   // MARK: - path
   var path: String {
     switch self {
     case .getMovies:
       return "/discover/movie"
+    case .getMovieDetail(let id):
+      return "/movie/\(id)"
     }
   }
   
@@ -32,7 +35,10 @@ enum APIRouter: URLRequestConvertible {
         "primary_release_date.lte": releaseDateLessThan,
         "sort_by": sort_by,
         "page": page]
-      
+    case .getMovieDetail(_):
+      params = [
+        "api_key": Constants.Config.apiKey
+      ]
     }
     return params
   }

@@ -13,7 +13,6 @@ class APIUtils  {
   
   class func getImageUrl(imageId : String?) -> String{
     guard let imageId = imageId else {return ""}
-    
     return "\(Constants.Network.resourceBaseUrl)\(imageId)"
   }
   

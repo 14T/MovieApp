@@ -24,7 +24,7 @@ class MovieCell: UITableViewCell {
       nameLabel.text = data?.title
       descriptionLabel.text = data?.popularity
       coverImageView.image = #imageLiteral(resourceName: "moviePlaceholder")
-//      backdropImageView.image = #imageLiteral(resourceName: "moviePlaceholder")
+      //      backdropImageView.image = #imageLiteral(resourceName: "moviePlaceholder")
       
       if let url = data?.posterPathId{
         coverImageView.kf.setImage(with: url )
@@ -36,7 +36,7 @@ class MovieCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     coverView.clipToRoundedCorner(withBorderWidth: 1, borderColor: UIColor.white)
-
+    
     
     //TODO: UI Improvement
     initialsLabel.adjustsFontSizeToFitWidth = true
@@ -58,9 +58,6 @@ class MovieCell: UITableViewCell {
   }
   override func layoutSubviews() {
     super.layoutSubviews()
-    
-    
-    
   }
   
   

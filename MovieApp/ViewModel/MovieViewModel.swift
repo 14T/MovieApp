@@ -17,6 +17,10 @@ struct MovieViewModel : CellRepresentable {
     self.movie = value
   }
   
+  var id : String {
+    return  movie.id  ?? ""
+  }
+  
   var title : String? {
     return movie.title
   }
@@ -28,7 +32,10 @@ struct MovieViewModel : CellRepresentable {
     return URL(string: APIUtils.getImageUrl(imageId: movie.posterPathId))
   }
  
-  
+  //Exposing movie because of special requirement
+  var movieObject : Movie {
+    return movie
+  }
   
 }
 

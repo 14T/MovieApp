@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, StoryboardInitable, Refreshable   {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "ShopBack Movies"
+    title = "ShopBack"
     tableView.setup(self, dataSource: self, cellClass: MovieCell.self, LoadingCell.self)
     tableView.backgroundColor = Constants.AppColor.darkGray
     
@@ -88,5 +88,13 @@ extension HomeViewController : UITableViewDataSource{
 }
 
 extension HomeViewController : UITableViewDelegate{
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+    let movieDetailViewController = MovieDetailViewController.instanceFromStoryboard()
+    movieDetailViewController.movieViewModel = (data[indexPath.row] as! MovieViewModel)
+    navigationController?.pushViewController(movieDetailViewController, animated: true)
+    
+  }
+  
   
 }

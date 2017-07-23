@@ -44,13 +44,12 @@ class HomeViewControllerTests: XCTestCase {
     XCTAssertTrue(sut.data is [CellRepresentable])
   }
   
-  func test_NumberOfRows_IsDataCuont(){
-    XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), sut.data.count)
+  func test_NumberOfRows_IsDataCountPlusOne(){
 
     let movieViewModel = MovieViewModel(value: Movie(name: "Test Movie"))
     sut.data.append(movieViewModel)
     sut.tableView.reloadData()
-    XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), sut.data.count)
+    XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), sut.data.count + 1)
   }
   
   func test_CellForRowAt_ReturnsMovieCell(){
